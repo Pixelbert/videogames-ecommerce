@@ -1,0 +1,286 @@
+h1 { 
+    text-align: center; 
+    color: #333; 
+    font-family: Arial, sans-serif;
+}
+
+.catalogo { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.card { 
+    background: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    width: 250px; 
+    text-align: center; 
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 { 
+    color: #007BFF; 
+    font-size: 1.2rem; 
+    margin-bottom: 5px;
+}
+
+.precio { 
+    font-weight: bold; 
+    color: #28a745; 
+    font-size: 1.1rem; 
+}
+
+.consola { 
+    background: #eee; 
+    padding: 5px; 
+    border-radius: 4px; 
+    font-size: 0.9rem; 
+    display: inline-block;
+}
+
+button { 
+    background: #007BFF; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    width: 100%; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button:hover { 
+    background: #0056b3; 
+}
+/* --- ESTILOS DEL LOGIN --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 300px;
+    text-align: center;
+}
+
+.login-box h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* --- ESTILOS DE LA CABECERA (Tienda) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-salir {
+    background: #dc3545; /* Rojo para el botón de salir */
+    width: auto;
+    padding: 8px 15px;
+}
+
+.btn-salir:hover {
+    background: #c82333;
+}
+
+/* --- BOTÓN DEL CARRITO EN EL HEADER --- */
+.header div {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-carrito {
+    background: #28a745;
+    width: auto;
+    padding: 8px 15px;
+    margin-top: 0;
+}
+
+.btn-carrito:hover {
+    background: #218838;
+}
+
+/* --- FONDO OSCURO (OVERLAY) --- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999; /* Se pone por encima de la página */
+}
+
+/* --- PESTAÑA LATERAL (SIDEBAR) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* La escondemos fuera de la pantalla por la derecha */
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 15px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out; /* Animación de deslizamiento suave */
+    display: flex;
+    flex-direction: column;
+    z-index: 1000; /* Siempre hasta el frente */
+}
+
+/* Cuando esta clase se activa, la pestaña entra a la pantalla */
+.sidebar.abierta {
+    right: 0; 
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-cerrar {
+    background: none;
+    color: #333;
+    font-size: 1.2rem;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-cerrar:hover {
+    background: none;
+    color: red;
+}
+
+.sidebar-content {
+    flex-grow: 1; /* Ocupa el espacio sobrante */
+    padding: 20px;
+    overflow-y: auto; /* Si hay muchos juegos, agrega barra de desplazamiento aquí */
+}
+
+.item-carrito {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.item-carrito p {
+    margin: 5px 0;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.btn-pagar {
+    background: #17a2b8;
+    font-size: 1.1rem;
+}
+
+.btn-pagar:hover {
+    background: #138496;
+}
+
+.header {
+    background: #1a1a2e; /* Azul muy oscuro tipo gamer */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.header h1 { color: #00d2ff; margin: 0; font-size: 1.5rem; }
+
+.btn-carrito, .btn-salir {
+    background: #0f3460;
+    border: 1px solid #00d2ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-carrito:hover { background: #00d2ff; color: #1a1a2e; }
+
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    background: #16213e; /* Fondo de la página */
+    min-height: 100vh;
+}
+
+.card {
+    background: #1a1a2e;
+    color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #0f3460;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+}
+
+.card h3 { color: #00d2ff; padding: 15px 15px 0; }
+.card p { padding: 0 15px; color: #b4b4b4; }
+.precio { color: #4ecca3 !important; font-size: 1.3rem !important; }
+
+.login-container {
+    background: linear-gradient(rgba(26,26,46,0.9), rgba(26,26,46,0.9)), 
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2000');
+    background-size: cover;
+}
+
+.login-box {
+    background: rgba(22, 33, 62, 0.95);
+    border: 1px solid #00d2ff;
+    color: white;
+}
+
+.login-box input {
+    background: #1a1a2e;
+    border: 1px solid #0f3460;
+    color: white;
+}
