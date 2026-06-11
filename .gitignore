@@ -1,0 +1,13 @@
+# Ignorar librerías
+node_modules/
+
+# Ignorar variables de entorno
+.env
+
+# Ignorar compilaciones de Angular y TS
+dist/
+.angular/
+.output/
+
+# Ignorar archivos de sistema
+.DS_Store
